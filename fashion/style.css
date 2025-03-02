@@ -1,0 +1,230 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #F8AFA6;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #F8AFA6;
+    display: flex;
+}
+.part1{
+    height: 100%;
+    width: 25%;
+    /* background-color: aquamarine; */
+}
+.part2{
+    height: 100%;
+    width: 65%;
+    /* background-color: rgb(133, 255, 127); */
+    background-image: url(https://images.unsplash.com/photo-1516726817505-f5ed825624d8?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: 0% 0%;
+    position: relative;
+}
+.part3{
+    height: 100%;
+    width: 10%;
+    /* background-color: rgb(255, 127, 255); */
+}
+.overlay1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F8AFA6;
+    opacity: 35%;
+}
+.text{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    /* background-color: aquamarine; */
+    /* height: 400px; */
+    /* width: 400px; */
+    transform: translate(10%,-50%);
+}
+.text h1{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Abril Fatface", serif;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 65px;
+    letter-spacing: 2px;
+}
+.img{
+    height: 400px;
+    width: 300px;
+    background-color:  red;
+    position: absolute;
+    top: 50%;
+    right: 6%;
+    transform: translate(0,-40%);
+    background-image: url(https://plus.unsplash.com/premium_photo-1682095640858-697656f8ef1b?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+.overlay2{
+    height: 100%;
+    width: 100%;
+    background-color: #ad1c09f2;
+    opacity: 40%;
+}
+.text2{
+    position: absolute;
+    right: -65%;
+    left: 5%;
+    top: 45%;
+    color: white;
+    /* width: 100%; */
+    /* height: 20%; */
+    /* background-color: aquamarine; */
+    transform: rotate(90deg);
+    display: flex;
+    flex-direction: column;
+    align-items:center; 
+     justify-content: center
+}
+.text2 h1{ 
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size: 70px;
+    letter-spacing: 8px;
+    /* line-height: 50px; */
+    color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    /* position: absolute; */
+    /* bottom: 60%; */
+    /* right: 20%; */
+    /* transform: translate(0,-150%); */
+    /* z-index: 1; */
+}
+.btn1{
+    position:absolute;
+    top: 65%;
+    left: 8%;
+    /* background-color: white; */
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    
+}
+#btn{
+    font-size: 20px;
+    box-shadow: -4px 6px 10px rgb(203, 114, 114);
+}
+.logo{
+    position: absolute;
+    left: 1%;
+    top: -2%;
+    height: 30%;
+    width: 20%;
+    /* background-color: aqua; */
+    background-image: url("assets/mz-high-resolution-logo-removebg.png");
+    background-size: cover;
+    background-position: 80%,50%;
+    /* background-color: transparent; */
+}
+
+
+@media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+  
+    .part1, .part3 {
+      display: none;
+    }
+  
+    .part2 {
+      width: 100%;
+      height: 60vh;
+      background-position: center 25%;
+    }
+  
+    .text {
+      left: 5%;
+      top: 40%;
+      transform: translate(0, -50%);
+    }
+  
+    .text h1 {
+      font-size: 50px;
+      line-height: 45px;
+      letter-spacing: 1px;
+    }
+  
+    .img {
+      height: 300px;
+      width: 80%;
+      right: 50%;
+      transform: translate(50%, -30%);
+    }
+  
+    .text2 {
+      position: relative;
+      transform: rotate(0deg);
+      top: auto;
+      right: auto;
+      left: 50%;
+      bottom: -40px;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  
+    .text2 h1 {
+      font-size: 40px;
+      -webkit-text-stroke-width: 2px;
+      letter-spacing: 4px;
+    }
+  
+    .btn1 {
+      top: auto;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .logo {
+      top: 2%;
+      left: 5%;
+      width: 40%;
+      height: 15%;
+      background-position: left center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text h1 {
+      font-size: 40px;
+      line-height: 35px;
+    }
+  
+    .img {
+      height: 250px;
+      width: 90%;
+    }
+  
+    .text2 h1 {
+      font-size: 30px;
+      letter-spacing: 2px;
+    }
+  
+    #btn {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  
+    .logo {
+      width: 50%;
+      height: 12%;
+    }
+  }
